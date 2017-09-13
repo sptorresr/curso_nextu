@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi Tienda</title>
+	<style type="text/css">
+		/*div {
+			border: 3px solid blue;
+			float:left;
+		}*/
+		.banner {
+			border: 3px solid gray;
+			/*float:left;*/
+			width:1000px;
+			height: 300px;
+		}
+		.menusuperior {
+			border: 3px solid blue;
+			/*float:left;*/
+			/*clear: left;*/
+			margin-top: 5px;
+			width:1000px;
+			height: 80px;
+		}
+		.izquierdo{
+			border: 3px solid blue;
+			/*float:left;*/
+			margin-top: 5px;
+			clear: left;
+			width: 200px;
+			height: 500px;
+		}
+		.contenido{
+			border: 3px solid blue;
+			/*float:left;*/
+			margin-top: 5px;
+			margin-left: 5px;
+			width: 790px;
+			height: 500px;
+		}
+		.pie {
+			border: 3px solid blue;
+			/*float:left;
+			clear: left;*/
+			width: 1000px;
+			height: 30px;
+			margin-top: 5px;
+
+		}
+		.logo {
+
+			margin-right: 20px;
+			width: 200px;
+			/*height: 70;*/
+
+			
+		}
+		.botones{
+
+			text-align: center;
+    		vertical-align: middle;
+    		border: 2px;
+    		border-style: solid;
+    		border-color: blue;
+    		padding: 5px;
+    		margin: 5px;
+    		width: 80px;
+    		height: 36px;
+		}	
+		.MenuIzquierdo{
+			text-align: center;
+    		vertical-align: middle;
+    		border: 2px;
+    		border-style: solid;
+    		border-color: blue;
+    		padding: 5px;
+    		margin: 5px;
+    		width: 130px;
+    		height: 36px;
+		}
+		div {
+			/*display: block;*/
+			float: left;
+
+		}
+		.conpro{
+			border-style: dotted;
+			border-color:black;
+			width:150px;
+			height: 150px;
+			margin-left: 20px;
+			margin-top: 40px;
+		}
+		.imgpro{
+			border-style: solid;
+			border-color:orange;
+			margin-top: 5px;
+			margin-left: 30px;
+			text-align: center;
+		}
+		.nompro{
+			width:150px;
+			height: 10px;
+			margin-left: 10px;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+
+		.carrito{
+			margin-left: 10px;
+		}
+		.eliminar{
+			margin-left: 70px;
+		}
+		.pie{
+			width: 1000px;
+			height: 70px;
+			text-align: center;	
+		}
+		.pedido{
+			text-align: center;
+    		vertical-align: middle;
+    		border: 2px;
+    		border-style: solid;
+    		border-color: green;
+    		padding: 5px;
+    		margin: 5px;
+    		width: 178px;
+    		height: 150px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<img src="imagenes/Banner.jpg" width="1000px" height="300px" >
+	</div>
+	<div class="menusuperior">
+
+		<div class="logo">
+			<img src="imagenes/nombre1.png" width="200px" height="70">
+			
+		</div>
+		<div class="botones">
+			Menu
+		</div>
+		<div class="botones">
+			Ventajas
+		</div>
+		<div class="botones">
+			Marcas Aliadas
+		</div>
+		<div class="botones">
+			Noticias
+		</div>
+		<div class="botones">
+			Tenderos Ejemplares
+		</div>
+		
+	</div>
+	<div class="izquierdo">
+		<div class="MenuIzquierdo">Home</div>
+		<div class="MenuIzquierdo">Quienes Somos</div>
+		<div class="MenuIzquierdo">Contactanos</div>
+		<div class="MenuIzquierdo">Como Funciona</div>
+		<div id="cancelar" class="MenuIzquierdo" onclick="cancelar()" >Vaciar Carrito</div>
+		<div class="pedido"><b>PEDIDO</b><br>
+			<div >Productos:</div>
+			<div id="compras" >0</div><br>
+			<div >Valor Pedido  &nbsp; &nbsp;:$</div>
+			<div id="valpedido" >0</div>
+			<div >Valor Dolares &nbsp;:$</div>
+			<div id="valdolares" >0</div>
+			<div >Valor Iva  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;:$</div>
+			<div id="valiva" >0</div>
+			<div >Valor Envio  &nbsp; &nbsp; :$</div>
+			<div id="envio" >0</div>
+			<div >Total Pedido  &nbsp; &nbsp;:$</div>
+			<div id="totpedido" >0</div>
+		</div>
+
+
+	</div>
+	<div class="contenido">
+		<div  class="conpro">
+			<div id="imgpro1" class="imgpro" onmouseover="camangel()" onmouseout="cambota()" onclick="comprar('imgpro1',12500)" >
+				<img id="angel" src="imagenes/Angel.jpg" width="90px" height="90px" >
+			</div>
+			<div class="nompro">
+				Angel $12500
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro1',12500)">
+			</div>
+
+		</div>
+		<div class="conpro">
+			<div id="imgpro2" class="imgpro" onmouseover="camangel1()" onmouseout="cambota1()" onclick="comprar('imgpro2',5500)" >	
+				<img id="bota" src="imagenes/Bota.jpg" width="90px" height="90px" >
+			</div>	
+			<div class="nompro">
+				Bota $5500
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro2',5500)" >
+			</div>
+		</div>
+		<div class="conpro">
+			<div id="imgpro3" class="imgpro" onmouseover="camhuevos()" onmouseout="camperchero()" onclick="comprar('imgpro3',12000)" >
+				<img id="huevos"  src="imagenes/Huevos.jpg" width="90px" height="90px" >
+			</div>	<div class="nompro">
+				Huevos $12000
+			</div> 
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro3',12000)"  >
+			</div>
+
+		</div>
+		<div class="conpro">
+			<div  id="imgpro4" class="imgpro" onmouseover="camhuevos1()" onmouseout="camperchero1()" onclick="comprar('imgpro4',25000)" >
+				<img id="perchero" src="imagenes/Perchero1.jpg" width="90px" height="90px" >
+			</div>	
+			<div class="nompro">
+				Perchero $25000
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro4',25000)" >
+			</div>
+		</div>
+		<div class="conpro">
+			<div id="imgpro5" class="imgpro" onmouseover="camhuevos2()" onmouseout="recordatorio()" onclick="comprar('imgpro5',11500)" >
+				<img  id="huevos2" src="imagenes/Huevos2.jpg" width="90px" height="90px" >
+			</div>	
+			<div class="nompro">
+				Huevos $11500
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro5',11500)" >
+			</div>
+		</div>
+		<div class="conpro">
+			<div id="imgpro6" class="imgpro" onmouseover="camhuevos21()" onmouseout="recordatorio1()" onclick="comprar('imgpro6',3500)" >
+				<img  id="record" src="imagenes/Recordatorios.jpg" width="90px" height="90px"  >
+			</div>	
+			<div class="nompro">
+				Suvenir $3500
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro6',3500)" >
+			</div>
+		</div>
+		<div class="conpro">
+			<div id="imgpro7" class="imgpro" onmouseover="camreloj()" onmouseout="camsanta()" onclick="comprar('imgpro7',15000)" >
+				<img id="reloj" src="imagenes/Reloj.jpg" width="90px" height="90px" >
+			</div>	
+			<div class="nompro">
+				Reloj $15000
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px" >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro7',15000)"  >
+			</div>
+		</div>
+		<div class="conpro">
+			<div id="imgpro8" class="imgpro" onmouseover="camreloj1()" onmouseout="camsanta1()" onclick="comprar('imgpro8',10000)"  >
+				<img id="santa" src="imagenes/Santa.jpg" width="90px" height="90px" >
+			</div>	
+			<div class="nompro">
+				Santa $10000
+			</div>
+			<div class="carrito">
+				<img src="imagenes/Carrito.png" width="30px" height="30px"  >
+			</div>
+
+			<div class="eliminar">
+				<img src="imagenes/eliminar.jpg" width="30px" height="30px" onclick="eliminar_producto('imgpro8',10000)" >
+			</div>
+		</div>
+		
+	</div>
+	<div class="pie">
+		<h3>Derechos Reservados</h3>
+	</div>
+	<script>
+		var productos = 0;
+		var total =0;
+		var peddolares=0;
+		var trm=3005;
+		var iva16=0.16;
+		var totiva=0;
+		var costoenvio=0;
+		var totalpedido=0;
+
+		function comprar(identificador,precio){
+			document.getElementById(identificador).style.borderColor='red';
+			productos = productos + 1;
+			document.getElementById('compras').innerHTML=productos;
+			total = total + precio;
+			document.getElementById('valpedido').innerHTML=total;
+			peddolares=total/trm;
+			document.getElementById('valdolares').innerHTML=peddolares.toFixed(2);
+			totiva=total*iva16;
+			document.getElementById('valiva').innerHTML=totiva.toFixed(2);
+			costoenvio=5000;
+			document.getElementById('envio').innerHTML=costoenvio;
+			totalpedido=total+totiva+costoenvio;
+			document.getElementById('totpedido').innerHTML=totalpedido.toFixed(2);
+
+		}
+		function eliminar_producto(identificador,precio){
+			productos = productos - 1;
+			document.getElementById('compras').innerHTML=productos;
+			total = total - precio;
+			document.getElementById('valpedido').innerHTML=total;
+			peddolares=total/trm;
+			document.getElementById('valdolares').innerHTML=peddolares.toFixed(2);
+			totiva=total*iva16;
+			document.getElementById('valiva').innerHTML=totiva.toFixed(2);
+			totalpedido=total+totiva+costoenvio;
+			document.getElementById('totpedido').innerHTML=totalpedido.toFixed(2);
+			document.getElementById(identificador).style.borderColor='orange';
+
+		}
+		function cancelar(){
+			productos=0;
+			total=0;
+			peddolares=0;
+			totiva=0;
+			totalpedido=0;
+			costoenvio=0;
+			document.getElementById('compras').innerHTML=productos;
+			document.getElementById('valpedido').innerHTML=total;
+			document.getElementById('valdolares').innerHTML=peddolares;
+			document.getElementById('valiva').innerHTML=totiva;
+			document.getElementById('totpedido').innerHTML=totalpedido;
+			document.getElementById('envio').innerHTML=totalpedido;
+
+
+
+		}
+
+		function camangel(){
+			document.getElementById('angel').src='imagenes/Angel2.jpg';
+		}
+		function cambota(){
+			document.getElementById('angel').src='imagenes/Angel.jpg';
+		}
+		function camangel1(){
+			document.getElementById('bota').src='imagenes/Bota2.jpg';
+		}
+		function cambota1(){
+			document.getElementById('bota').src='imagenes/Bota.jpg';
+		}
+		function camhuevos(){
+			document.getElementById('huevos').src='imagenes/Huevos2.jpg';
+		}
+		function camperchero(){
+			document.getElementById('huevos').src='imagenes/Huevos.jpg';
+		}
+		function camhuevos1(){
+			document.getElementById('perchero').src='imagenes/Perchero2.jpg';
+		}
+		function camperchero1(){
+			document.getElementById('perchero').src='imagenes/Perchero1.jpg';
+		}
+		function camhuevos2(){
+			document.getElementById('huevos2').src='imagenes/Huevos4.jpg';
+		}
+		function recordatorio(){
+			document.getElementById('huevos2').src='imagenes/Huevos3.jpg';
+		}
+		function camhuevos21(){
+			document.getElementById('record').src='imagenes/Recordatorios2.jpg';
+		}
+		function recordatorio1(){
+			document.getElementById('record').src='imagenes/Recordatorios.jpg';
+		}
+		function camreloj(){
+			document.getElementById('reloj').src='imagenes/Reloj2.jpg';
+		}
+		function camsanta(){
+			document.getElementById('reloj').src='imagenes/Reloj.jpg';
+		}
+		function camreloj1(){
+			document.getElementById('santa').src='imagenes/Santa2.jpg';
+		}
+		function camsanta1(){
+			document.getElementById('santa').src='imagenes/Santa.jpg';
+		}
+	
+
+	
+		
+		
+	</script>
+</body>
+</html>
